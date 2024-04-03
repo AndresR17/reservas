@@ -1,0 +1,26 @@
+$tamano:150px;
+$alto:20px;
+
+$anchoInput:80%;
+$altoInput:20px;
+
+
+h1{
+    text-align: center;
+}
+
+ul{
+    list-style-type: none;
+}
+
+label{
+    width: $tamano;
+    height: $alto;
+    display: inline-block;
+}
+
+input[type='text'],select{
+    width:$anchoInput;
+    height: $altoInput;
+}
+
