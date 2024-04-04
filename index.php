@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <div class="mensaje"></div>
+    <div id="mensaje"><p>No se puede escoger el pais de destino igual que el pais de origen</p></div>
     <h1 class="title">Reservar Vuelo Internacional</h1>
-    <form id="formulario" method="post" action="reservas.php">
+    <form id="formulario" method="POST" action="./reservas.php">
         <ul>
             <li>
                 <label for="nombre">Nombre Completo:</label>
@@ -59,31 +59,34 @@
 
             <li>
                 <label>Tipo de Viaje:</label>
-                <input type="radio" name="tipo" id="tipo1">
+                <br>
+                <input type="radio" name="tipo1" id="tipo1">
                 <label for="tipo1">Ida/Regreso</label>
 
-                <input type="radio" name="tipo" id="tipo2">
+                <input type="radio" name="tipo2" id="tipo2">
                 <label for="tipo2">Sin Regreso</label>
             </li>
+            <br> 
 
             <li>
                 <label for="fechaIda">Fecha Viaje/Ida:</label>
-                <input type="date" name="fechaViaje" id="fechaIda" required>
+                <input type="date" name="fechaViaje1" id="fechaIda" required>
             </li>
 
             <li id="fechaRegreso">
                 <label for="fechaRetorno">Fecha Viaje/Retorno:</label>
-                <input type="date" name="fechaViaje" id="fechaRetorno">
+                <input type="date" name="fechaViaje2" id="fechaRetorno">
             </li>
 
             <li>
                 <label for="numeroTiquetes">Número de Tiquetes:</label>
-                <input type="number" id="numeroTiquetes">
+                <input type="number" name="tiquetes" id="numeroTiquetes">
             </li>
             <br>
             
 
-            <button type="submit">Reservar Tiquete</button>
+            <button type="submit"  href='./index.php'
+            >Reservar Tiquete</button>
         </ul>
     </form>
     <script src="js/validaciones.js" async defer></script>

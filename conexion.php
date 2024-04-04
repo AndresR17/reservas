@@ -1,11 +1,16 @@
 <?php
-// Datos de conexión a la base de datos
-$servername = "localhost"; // Cambia esto si tu servidor de base de datos está en un host diferente
+
+$servername = "localhost";
 $username = "root";
 $password = "";
-$database = "el_dorado_db";
+$database = "bdaero";
 
-// Creamos la conexión
-$conn = new mysqli($servername, $username, $password, $database);
+$conexion = new mysqli($servername, $username, $password, $database);
+if ($conexion->connect_errno){
+    die("conexion fallida" . $conexion->connect_errno);
+}
 
+else{
+    echo "conectado";
+}
 ?>
