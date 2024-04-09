@@ -15,20 +15,15 @@ paisDestino.addEventListener("change", function(){
         mensaje.style.color="red";
     }
 });
-
 let fechaRegreso = document.getElementById("fechaRegreso");
 let tipo2 = document.getElementById("tipo2");
 tipo2.addEventListener("click",function(){
-    
-    fechaRegreso.style.display="none";
-    
+    fechaRegreso.style.display = "none";   
 });
 
 let tipo1 = document.getElementById("tipo1");
 tipo1.addEventListener("click",function(){
-    
-    fechaRegreso.style.display="block";
-    
+    fechaRegreso.style.display = "block";   
 });
 
 

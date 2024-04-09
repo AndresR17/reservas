@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agency ADSO</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <div id="mensaje"><p>No se puede escoger el pais de destino igual que el pais de origen</p></div>
+    <div id="mensaje">
+        <p>No se puede escoger el pais de destino igual que el pais de origen</p>
+    </div>
     <h1 class="title">Reservar Vuelo Internacional</h1>
     <form id="formulario" method="POST" action="./reservas.php">
         <ul>
@@ -56,37 +60,35 @@
                     <option value="Mexico">México</option>
                 </select>
             </li>
-
             <li>
                 <label>Tipo de Viaje:</label>
                 <br>
-                <input type="radio" name="tipo1" id="tipo1">
+                <input type="radio" name="tipoViaje" id="tipo1" value="idaRegreso">
                 <label for="tipo1">Ida/Regreso</label>
 
-                <input type="radio" name="tipo2" id="tipo2">
+                <input type="radio" name="tipoViaje" id="tipo2" value="sinRegreso">
                 <label for="tipo2">Sin Regreso</label>
             </li>
-            <br> 
 
+            <br>
             <li>
                 <label for="fechaIda">Fecha Viaje/Ida:</label>
                 <input type="date" name="fechaViaje1" id="fechaIda" required>
             </li>
-
             <li id="fechaRegreso">
                 <label for="fechaRetorno">Fecha Viaje/Retorno:</label>
                 <input type="date" name="fechaViaje2" id="fechaRetorno">
             </li>
+
 
             <li>
                 <label for="numeroTiquetes">Número de Tiquetes:</label>
                 <input type="number" name="tiquetes" id="numeroTiquetes">
             </li>
             <br>
-            
 
-            <button type="submit"  href='./index.php'
-            >Reservar Tiquete</button>
+
+            <button type="submit" href='./index.php'>Reservar Tiquete</button>
         </ul>
     </form>
     <script src="js/validaciones.js" async defer></script>
